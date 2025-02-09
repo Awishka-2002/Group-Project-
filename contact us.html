@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url(img2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    header {
+      background-color: #2E5090;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 8px 20px;
+    }
+
+    header nav a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    header .logo-container img {
+      border-radius: 50%;
+      float: left;
+      height: 100px;
+      max-width: 200px;
+    }
+
+    .container {
+      max-width: 550px;
+      height: 600px;
+      margin: 30px auto;
+      padding: 40px;
+      border: 2px solid rgb(8, 8, 22);
+    }
+    .contact-info {
+      margin-bottom: 40px;
+    }
+    img {
+      float: left;
+      max-width: 30px;
+      height: 20px;
+      margin-right: 20px;
+    }
+
+    .contact-info h2 {
+      font-size: 24px;
+      border: 1px solid line;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+    .write-us {
+      background-color: #f2f2f2;
+      padding: 40px;
+      border: 3px solid black;
+      border-radius: 5px;
+      max-width: 500px;
+      height: 320px;
+    }
+    .write-us h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: rgb(8, 3, 3);
+    }
+    .write-us input, .write-us textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .write-us button {
+      background-color: #4340f4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #2E5090;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    footer .logo-cont img {
+      max-height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2.5;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer iframe {
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="logo.png" alt="HotelSimplify Logo">
+    </div>
+    <p>Hotel Management System</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div class="contact-info">
+      <h1>Contact Information</h1>
+      <img src="icon2.jpg"><p><b>Address: Narahenpita, Colombo.</b></p>
+      <img src="icon6.png"><p>Contact Number: 077-3465980</p>
+      <img src="icon7.png"><p>E-mail: Resort@gmail.com</p>
+    </div>
+    <div class="write-us">
+      <h2>Write us ...</h2>
+      <form>
+        <input type="text" placeholder="FULL NAME" />
+        <input type="email" placeholder="EMAIL" />
+        <input type="tel" placeholder="PHONE" />
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="cont">
+        <div>
+            <p><strong>Contacts</strong></p>
+            <p>123 Hotel Street, City, Country</p>
+            <p>+123 456 7890</p>
+            <p>contact@hotel.com</p>
+        </div>
+
+        <div>
+            <p><strong>Hotel Management</strong></p>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Bookings</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Guests</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p><strong>Visit Us</strong></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.385925328466!2d79.90498611430074!3d6.930339395391226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a9681593061%3A0x63c09284c9f56c4b!2sSPAR%20Supermarket%2C%20Kelaniya!5e0!3m2!1sen!2slk!4v1700555367759!5m2!1sen!2slk" width="200" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 10px; font-size: 14px;">
+        <p>&copy; Copyright 2025 | HotelSimplify | All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
