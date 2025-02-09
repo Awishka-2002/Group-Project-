@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            background-color: #2E5090;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px 20px;
+        }
+
+        header nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        header .logo-container img {
+            border-radius: 50%;
+            float: left;
+            height: 100px;
+            width: 100px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .row input {
+            flex: 1;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background: #218838;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .popup h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .popup p {
+            font-size: 14px;
+            color: #555;
+        }
+        p{
+            color: #fff;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background: #0056b3;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        footer {
+            background-color: #2E5090;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .cont {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        footer .logo-cont img {
+            max-height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 2.5;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer iframe {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="HotelSimplify Logo" width="50" height="50">
+        </div>
+        <p>Hotel Management System</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><img src="1.jpeg" style="width: 110px; height: 70px;"></td>
+                    <td><img src="2.jpeg" style="width: 120px; height: 90px;"></td>
+                    <td><img src="3.jpeg" style="width: 110px; height: 70px;"></td>
+                </tr>
+            </table>
+
+            <h1>Hotel Booking</h1>
+            <p>Experience something new every moment</p>
+        </div>
+        <form onsubmit="event.preventDefault(); showPopup();">
+            <div class="row">
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+
+            <div class="row">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <label for="room-type">Room Type</label>
+            <select id="room-type" name="room-type" required>
+                <option value="">Please Select</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" placeholder="e.g., 2" required>
+            <div class="row">
+
+            <label for="arrival">Check-in Date & Time</label>
+            <input type="date" id="arrival-date" name="arrival-date" required>
+            <input type="time" id="arrival-time" name="arrival-time" required>
+            </div>
+            <div class="row">
+
+                <label for="arrival">Check-out Date & Time</label>
+                <input type="date" id="arrival-date" name="arrival-date" required>
+                <input type="time" id="arrival-time" name="arrival-time" required>
+                </div>
+
+            <label for="special-requests">Special Requests</label>
+            <textarea id="special-requests" name="special-requests" placeholder="Any additional information"></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Billing Details</h2>
+        
+        <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Room Number:</strong> 205</p>
+            <p><strong>Check-In Date:</strong> 2025-01-15</p>
+            <p><strong>Check-Out Date:</strong> 2025-01-19</p>
+            <p><strong>Total Nights:</strong> 4</p>
+            <p><strong>Room Charges:</strong> $400</p>
+            <p><strong>Additional Charges:</strong> $50</p>
+            <p><strong>Total Amount:</strong> $450</p>
+            <button onclick="printPopup()">Print</button>
+            <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+        <footer>
+            <div class="cont">
+                <!-- Logo and Contacts -->
+                <div>
+                    <p><strong>Contacts</strong></p>
+                    <p>123 Hotel Street, City, Country</p>
+                    <p>+123 456 7890</p>
+                    <p>contact@hotel.com</p>
+                </div>
+    
+                <!-- Links -->
+                <div>
+                    <p><strong>Hotel Management</strong></p>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Rooms</a></li>
+                        <li><a href="#">Guests</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Map -->
+                <div>
+                    <p><strong>Visit Us</strong></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.385925328466!2d79.90498611430074!3d6.930339395391226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a9681593061%3A0x63c09284c9f56c4b!2sSPAR%20Supermarket%2C%20Kelaniya!5e0!3m2!1sen!2slk!4v1700555367759!5m2!1sen!2slk" width="200" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div style="text-align: center; margin-top: 10px; font-size: 14px;">
+                <p>&copy; Copyright 2025 | HotelSimplify | All Rights Reserved</p>
+            </div>
+        </footer>
+</body>
+</html>
